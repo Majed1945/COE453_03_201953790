@@ -1,0 +1,67 @@
+swagger: "2.0"
+info:
+  title: Calculator API
+  description: API for performing arithmetic calculations.
+  version: 1.0.0
+
+host: us-central1-homework3-418304.cloudfunctions.net
+basePath: /
+schemes:
+  - https
+
+paths:
+  /add:
+    post:
+      summary: Perform addition
+      operationId: add
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+      x-google-backend:
+        address: https://us-central1-homework3-418304.cloudfunctions.net/add
+
+  /sub:
+    post:
+      summary: Perform subtraction
+      operationId: sub
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+      x-google-backend:
+        address: https://us-central1-homework3-418304.cloudfunctions.net/sub
+
+  /mul:
+    post:
+      summary: Perform multiplication
+      operationId: mul
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+      x-google-backend:
+        address: https://us-central1-homework3-418304.cloudfunctions.net/mul
+
+  /div:
+    post:
+      summary: Perform division
+      operationId: div
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+      x-google-backend:
+        address: https://us-central1-homework3-418304.cloudfunctions.net/div
